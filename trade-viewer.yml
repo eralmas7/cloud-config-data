@@ -1,0 +1,20 @@
+zuul:
+#   retryable: false
+  routes:
+    trade-service:
+      path: /trade/**
+      # retryable: true
+    index-service:
+      path: /indices/**
+      # retryable: false
+
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200000

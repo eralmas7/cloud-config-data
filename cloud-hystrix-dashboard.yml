@@ -1,0 +1,4 @@
+turbine:
+  appConfig: trade-viewer,index-service
+  aggregator:
+    clusterConfig: TRADE-VIEWER,INDEX-SERVICE
